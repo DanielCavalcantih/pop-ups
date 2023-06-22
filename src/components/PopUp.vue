@@ -20,6 +20,10 @@
             <option class="options" value="Feminino">Feminino</option>
           </select>
         </div>
+        <label for="privacity" v-if="bodyContent.checkbox">
+          <input type="checkbox" id="Privacity" class="check" v-model="userInfo.shareInfo" />
+          Permitir compartilhar essas informações
+        </label>
       </div>
       <div class="buttons">
         <button class="button continue" type="submit" @submit="this.continue">Continuar</button>
@@ -53,7 +57,8 @@
           email: '',
           name: '',
           number: '',
-          genre: ''
+          genre: '',
+          shareInfo: false
         }
       }
     },
@@ -123,7 +128,7 @@
 
   .img {
     width: 100%;
-    height: 100px;
+    height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -149,7 +154,6 @@
     justify-content: center;
     box-shadow: 0 0 20px;
     align-self: center;
-    margin-top: 15px;
     padding: 10px;
     border-radius: 20px;
   }
@@ -164,6 +168,21 @@
     font-family: SaoJoao;
     padding-left: 20px;
     margin-top: 10px;
+  }
+
+  label {
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .check {
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    margin-right: 10px;
   }
 
   h3 {
@@ -221,7 +240,7 @@
     display: flex;
     justify-content: space-between;
     align-self: center;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   .button {

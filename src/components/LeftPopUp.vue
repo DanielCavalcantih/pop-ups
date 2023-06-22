@@ -18,6 +18,10 @@
           <option class="options" value="Feminino">Feminino</option>
         </select>
       </div>
+      <label for="privacity" v-if="bodyContent.checkbox">
+        <input type="checkbox" id="Privacity" class="check" v-model="userInfo.shareInfo" />
+        Permitir compartilhar essas informações
+      </label>
     </div>
     <div class="buttons">
       <button class="button" type="submit" @submit="this.continue">Continuar</button>
@@ -119,7 +123,7 @@
     bottom: 30px;
     display: flex;
     flex-direction: column;
-    height: 560px;
+    height: 590px;
     width: 400px;
     border-radius: 10px;
     background-size: cover;
@@ -209,7 +213,23 @@
     display: flex;
     justify-content: space-between;
     align-self: center;
-    margin-top: 10px;
+    margin-top: 25px;
+  }
+
+  label {
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .check {
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    margin-right: 10px;
   }
 
   .button {
