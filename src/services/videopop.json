@@ -1,0 +1,10 @@
+{
+  "nameField": true,
+  "emailField": true,
+  "cellphoneField": true,
+  "genreField": true,
+  "checkoubox": true,
+  "videoUrl": "https://www.youtube.com/embed/neklEPUOOJM",
+  "title": "Assista ao vídeo!",
+  "subTitle": "Venha se tornar um jogador"
+}
