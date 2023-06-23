@@ -24,7 +24,7 @@
       </label>
     </div>
     <div class="buttons">
-      <button class="button" type="submit" @submit="this.continue">Continuar</button>
+      <button class="button" type="button" @click="this.continue">Continuar</button>
       <button class="button" type="button" @click="close">Fechar</button>
     </div>
   </form>
@@ -70,7 +70,8 @@
         console.log(json);
         return json;
       },
-      continue() {
+      continue(e) {
+        e.preventDefault()
         this.sendJson();
         this.closeLeftPop();
       },
@@ -206,6 +207,11 @@
   .input-select {
     width: 48%;
     cursor: pointer;
+    color: white;
+  }
+
+  .input-select * {
+    background-color: black;
   }
 
   .buttons {

@@ -26,7 +26,7 @@
         </label>
       </div>
       <div class="buttons">
-        <button class="button continue" type="submit" @submit="this.continue">Continuar</button>
+        <button class="button continue" type="button" @click="this.continue">Continuar</button>
         <button class="button close" @click="close">Fechar</button>
       </div>
     </form>
@@ -82,7 +82,6 @@
         }
         const json = JSON.stringify(obj);
         console.log(json);
-        return json;
       },
       continue() {
         this.sendJson();
@@ -264,7 +263,13 @@
     transform: scale(1.02);
   }
 
-  @media screen and (max-width: 365px) {
+  @media screen and (max-width: 355px) {
+    .container {
+      transform: scale(0.6);
+    }
+  }
+
+  @media screen and (max-width: 440px) {
     .header {
       font-size: 20px;
     }
@@ -274,7 +279,6 @@
     .container {
       transform: scale(0.8);
     }
-
   }
 
   @media screen and (max-height: 620px) {
